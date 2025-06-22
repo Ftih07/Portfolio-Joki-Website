@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     <link
       rel="icon"
@@ -39,7 +38,9 @@
     <!--==================== HEADER ====================-->
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="joki.html" target="_blank" class="nav__logo"> YVEZH </a>
+        <a href="joki-genshin.html" target="_blank" class="nav__logo">
+          YVEZH
+        </a>
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list grid">
             <li class="nav__itemm">
@@ -105,7 +106,7 @@
             </h1>
             <div class="home__blob grid">
               <div class="home__perfil">
-                <img src="assets/img/.jpg" alt="home perfil" />
+                <img src="assets/img/mbuh.jpg" alt="Photo Profile" />
               </div>
               <img
                 src="assets/img/shape-wawes.svg"
@@ -199,11 +200,13 @@
             <div class="skills__info">
               <!--HTML-->
               <div class="skills__data">
-                <div class="skills__blob">
-                  <img src="assets/img/skills/html-icon.png" alt="HTML" />
-                </div>
-                <h3 class="skills__name">HTML</h3>
-                <span class="skills__subtitle">Advanced</span>
+                <a href="https://en.wikipedia.org/wiki/HTML" target="_blank">
+                  <div class="skills__blob">
+                    <img src="assets/img/skills/html-icon.png" alt="HTML" />
+                  </div>
+                  <h3 class="skills__name">HTML</h3>
+                  <span class="skills__subtitle">Advanced</span>
+                </a>
               </div>
               <!--CSS-->
               <div class="skills__data">
@@ -521,20 +524,21 @@
         <div class="container section__border">
           <div class="projects__container swiper">
             <div class="swiper-wrapper">
-              <!--==================== PROJECT 1 ====================-->
-              @foreach($projects as $project)
+              <!--==================== PROJECT 1 - Aline Admin ====================-->
               <div class="projects__content swiper-slide">
                 <img
-                  src="{{ asset('storage/' . $project->image_project) }}"
-                  alt="{{ $project->name }}"
+                  src="assets/img/projects/Aline-Admin.webp"
+                  alt="Aline Admin"
                   class="projects__img"
                 />
                 <div>
-                  <span class="projects__subtitle"> {{ $project->role }} </span>
-                  <h1 class="projects__title">{{ $project->name }}</h1>
-                  <p class="projects__tech">{{ $project->tech }}</p>
+                  <span class="projects__subtitle">Fullstack Developer</span>
+                  <h1 class="projects__title">Apotek Online - Aline Admin</h1>
+                  <p class="projects__tech">
+                    Next Js, NeonDB, Clerk Auth, Cloudinary, Tailwind-css
+                  </p>
                   <a
-                    href="{{ $project->demo_link }}"
+                    href="https://aline-admin.vercel.app/"
                     class="projects__button"
                     target="_blank"
                   >
@@ -542,7 +546,294 @@
                   </a>
                 </div>
               </div>
-              @endforeach
+              <!--==================== PROJECT 2 - Aline Store ====================-->
+              <div class="projects__content swiper-slide">
+                <img
+                  src="assets/img/projects/Aline-Store.webp"
+                  alt="Aline Admin"
+                  class="projects__img"
+                />
+                <div>
+                  <span class="projects__subtitle">Fullstack Developer</span>
+                  <h1 class="projects__title">Apotek Online - Aline Store</h1>
+                  <p class="projects__tech">
+                    Next Js, React, Stripe, Tailwind-css
+                  </p>
+                  <a
+                    href="https://aline-store-seven.vercel.app/"
+                    class="projects__button"
+                    target="_blank"
+                  >
+                    Demo <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+              <!--==================== PROJECT 3 - Antonov Company ====================-->
+              <div class="projects__content swiper-slide">
+                <img
+                  src="assets/img/projects/Antonov-Company.webp"
+                  alt="Aline Admin"
+                  class="projects__img"
+                />
+                <div>
+                  <span class="projects__subtitle">Fullstack Developer</span>
+                  <h1 class="projects__title">Antonov Company</h1>
+                  <p class="projects__tech">HTML, CSS, JavaScript</p>
+                  <a
+                    href="https://mk-3-a-antonov-company.vercel.app/"
+                    class="projects__button"
+                    target="_blank"
+                  >
+                    Demo <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+              <!--==================== PROJECT 4 - K1NG GYM Purwokerto ====================-->
+              <div class="projects__content swiper-slide">
+                <img
+                  src="assets/img/projects/K1NG-GYM-PURWOKERTO.webp"
+                  alt="Aline Admin"
+                  class="projects__img"
+                />
+                <div>
+                  <span class="projects__subtitle">Fullstack Developer</span>
+                  <h1 class="projects__title">K1NG GYM Purwokerto</h1>
+                  <p class="projects__tech">Next Js, React, Tailwind-css</p>
+                  <a
+                    href="https://k1-ng-gym-website.vercel.app/"
+                    class="projects__button"
+                    target="_blank"
+                  >
+                    Demo <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+              <!--==================== PROJECT 5 - B11N GYM Purwokerto ====================-->
+              <div class="projects__content swiper-slide">
+                <img
+                  src="assets/img/projects/B11N-GYM-PURWOKERTO.webp"
+                  alt="Aline Admin"
+                  class="projects__img"
+                />
+                <div>
+                  <span class="projects__subtitle">Fullstack Developer</span>
+                  <h1 class="projects__title">B11N GYM Purwokerto</h1>
+                  <p class="projects__tech">Next Js, React, Tailwind-css</p>
+                  <a
+                    href="https://b11-n-gym-website.vercel.app/"
+                    class="projects__button"
+                    target="_blank"
+                  >
+                    Demo <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+              <!--==================== PROJECT 6 - Zestify ====================-->
+              <div class="projects__content swiper-slide">
+                <img
+                  src="assets/img/projects/Zestify.webp"
+                  alt="Aline Admin"
+                  class="projects__img"
+                />
+                <div>
+                  <span class="projects__subtitle">UI/UX Designer</span>
+                  <h1 class="projects__title">Zestify</h1>
+                  <p class="projects__tech">Figma</p>
+                  <a
+                    href="https://www.figma.com/design/M9zLQN9iOlE6OEJgAxL7gM/Zestify?node-id=0-1&node-type=canvas&t=E9KuzdJhaa6OUIfI-0"
+                    class="projects__button"
+                    target="_blank"
+                  >
+                    Demo <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+              <!--==================== PROJECT 7 - Naltlan Dealer ====================-->
+              <div class="projects__content swiper-slide">
+                <img
+                  src="assets/img/projects/Naltlan-Dealer.webp"
+                  alt="Aline Admin"
+                  class="projects__img"
+                />
+                <div>
+                  <span class="projects__subtitle">UI/UX Designer</span>
+                  <h1 class="projects__title">Naltlan Dealer</h1>
+                  <p class="projects__tech">Figma</p>
+                  <a
+                    href="https://www.figma.com/design/1vQMXWlVLuBPaAjeXVNV5e/DPK-B?node-id=0-1&t=DDB4Qdk6cb4CGUNh-1"
+                    class="projects__button"
+                    target="_blank"
+                  >
+                    Demo <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+              <!--==================== PROJECT 8 - Antonov Company - UI/UX ====================-->
+              <div class="projects__content swiper-slide">
+                <img
+                  src="assets/img/projects/Antonov-Company-UIUX.webp"
+                  alt="Aline Admin"
+                  class="projects__img"
+                />
+                <div>
+                  <span class="projects__subtitle">UI/UX Designer</span>
+                  <h1 class="projects__title">Antonov Company - UI/UX</h1>
+                  <p class="projects__tech">Figma</p>
+                  <a
+                    href="https://www.figma.com/design/SR6xh7FmZseVne42hCB3Tz/Figma---Antonov-Company---DPK-D?node-id=0-1&t=DBzceHXpyF9jB7yS-1"
+                    class="projects__button"
+                    target="_blank"
+                  >
+                    Demo <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+              <!--==================== PROJECT 9 - B1NG EMPIRE  ====================-->
+              <div class="projects__content swiper-slide">
+                <img
+                  src="assets/img/projects/B1NG-EMPIRE.png"
+                  alt="Aline Admin"
+                  class="projects__img"
+                />
+                <div>
+                  <span class="projects__subtitle">Fullstack Developer</span>
+                  <h1 class="projects__title">B1NG EMPIRE</h1>
+                  <p class="projects__tech">
+                    Laravel, Tailwind CSS, Filament, MySQL
+                  </p>
+                  <a
+                    href="https://b1ngempire.id/"
+                    class="projects__button"
+                    target="_blank"
+                  >
+                    Demo <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+              <!--==================== PROJECT 10 - Taste of Indonesia ====================-->
+              <div class="projects__content swiper-slide">
+                <img
+                  src="assets/img/projects/Taste-of-Indonesia.png"
+                  alt="Aline Admin"
+                  class="projects__img"
+                />
+                <div>
+                  <span class="projects__subtitle">Fullstack Developer</span>
+                  <h1 class="projects__title">Taste of Indonesia</h1>
+                  <p class="projects__tech">
+                    Laravel, Tailwind CSS, Filament, MySQL
+                  </p>
+                  <a
+                    href="https://tasteofindonesia.com.au/"
+                    class="projects__button"
+                    target="_blank"
+                  >
+                    Demo <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+              <!--==================== PROJECT 11 - Sejarah Inovatif ====================-->
+              <div class="projects__content swiper-slide">
+                <img
+                  src="assets/img/projects/Sejarah-Inovatif.png"
+                  alt="Aline Admin"
+                  class="projects__img"
+                />
+                <div>
+                  <span class="projects__subtitle">Fullstack Developer</span>
+                  <h1 class="projects__title">Sejarah Inovatif</h1>
+                  <p class="projects__tech">HTML, CSS, JavaScript</p>
+                  <a
+                    href="https://pas-sejarah.vercel.app/"
+                    class="projects__button"
+                    target="_blank"
+                  >
+                    Demo <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+              <!--==================== PROJECT 12 - Portfolio Website (01) ====================-->
+              <div class="projects__content swiper-slide">
+                <img
+                  src="assets/img/projects/Portfolio-Website-V1.png"
+                  alt="Aline Admin"
+                  class="projects__img"
+                />
+                <div>
+                  <span class="projects__subtitle">Fullstack Developer</span>
+                  <h1 class="projects__title">Portfolio Website (01)</h1>
+                  <p class="projects__tech">Next Js, React Js, Tailwind CSS</p>
+                  <a
+                    href="https://portfolio-website-sable-tau-78.vercel.app/"
+                    class="projects__button"
+                    target="_blank"
+                  >
+                    Demo <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+              <!--==================== PROJECT 13 - Dapoer Suka Suka ====================-->
+              <div class="projects__content swiper-slide">
+                <img
+                  src="assets/img/projects/Dapoer-Suka-Suka.png"
+                  alt="Aline Admin"
+                  class="projects__img"
+                />
+                <div>
+                  <span class="projects__subtitle"
+                    >Backend Developer - Hosting Website</span
+                  >
+                  <h1 class="projects__title">Dapoer Suka Suka</h1>
+                  <p class="projects__tech">HTML, CSS</p>
+                  <a
+                    href="www.ptspkk.my.id"
+                    class="projects__button"
+                    target="_blank"
+                  >
+                    Demo <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+              <!--==================== PROJECT 14 - BumiTani ====================-->
+              <div class="projects__content swiper-slide">
+                <img
+                  src="assets/img/projects/BumiTani.png"
+                  alt="Aline Admin"
+                  class="projects__img"
+                />
+                <div>
+                  <span class="projects__subtitle">UI/UX Designer</span>
+                  <h1 class="projects__title">BumiTani</h1>
+                  <p class="projects__tech">Figma</p>
+                  <a
+                    href="https://www.figma.com/design/5UadKqm40mhZudd7B9Zjjt/Lomba-UI%2FUX-Himiunsurya-%22Rush-of-Blood%22?node-id=0-1&p=f&t=Zp1KuyzRY9O6C5ce-0"
+                    class="projects__button"
+                    target="_blank"
+                  >
+                    Demo <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+              <!--==================== PROJECT 15 - Moneyment ====================-->
+              <div class="projects__content swiper-slide">
+                <img
+                  src="assets/img/projects/Moneyment.png"
+                  alt="Aline Admin"
+                  class="projects__img"
+                />
+                <div>
+                  <span class="projects__subtitle">UI/UX Designer</span>
+                  <h1 class="projects__title">Moneyment</h1>
+                  <p class="projects__tech">Figma</p>
+                  <a
+                    href="https://www.figma.com/design/tmWqLbl1oIYHo514eTXgOw/MoneyMent?node-id=0-1&p=f&t=IiSUW2gZlWhzSqLe-0"
+                    class="projects__button"
+                    target="_blank"
+                  >
+                    Demo <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
             </div>
             <!-- Swiper arrows -->
             <div class="swiper-button-next">
@@ -556,8 +847,6 @@
           </div>
         </div>
       </section>
-
-      <!--==================== TESTIMONIAL ====================-->
 
       <!--==================== CONTACT ====================-->
       <section class="contact section" id="contact">
@@ -602,65 +891,6 @@
                 </a>
               </div>
             </div>
-          </div>
-          <div class="contact__content">
-            <h3 class="contact__title">
-              <i class="ri-send-plane-line"></i> Have a query for me?
-            </h3>
-            <form
-              action="{{ route('contact.store') }}"
-              method="POST"
-              class="contact__form"
-              id="contact-form"
-            >
-              @csrf
-              <div class="contact__form-div">
-                <label class="contact__form-tag"> Name </label>
-                <input
-                  type="text"
-                  name="user_name"
-                  required
-                  placeholder="Your name"
-                  class="contact__form-input"
-                  id="contact-name"
-                />
-              </div>
-              <div class="contact__form-div">
-                <label class="contact__form-tag"> Email </label>
-                <input
-                  type="email"
-                  name="user_email"
-                  required
-                  placeholder="Your email"
-                  class="contact__form-input"
-                  id="contact-email"
-                />
-              </div>
-              <div class="contact__form-div">
-                <label class="contact__form-tag"> WhatsApp Number </label>
-                <input
-                  type="tel"
-                  name="user_whatsapp"
-                  required
-                  placeholder="Your WhatsApp number"
-                  class="contact__form-input"
-                  id="contact-whatsapp"
-                />
-              </div>
-              <div class="contact__form-div contact__form-area">
-                <label class="contact__form-tag"> Message </label>
-                <textarea
-                  name="user_project"
-                  placeholder="Ask me something?"
-                  id="contact-project"
-                  class="contact__form-input"
-                ></textarea>
-              </div>
-              <p class="contact__message" id="contact-message"></p>
-              <button type="submit" class="contact__button">
-                Send <i class="ri-arrow-right-up-line"></i>
-              </button>
-            </form>
           </div>
         </div>
       </section>
